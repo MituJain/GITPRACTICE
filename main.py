@@ -13,7 +13,7 @@ print("It is the 2rd line of code.")
 print("It is the 3rd line of code.")
 print("It is the 7th line of code.")
 print("It is the 8rd line of code.")
-print("hellp")
+print("It is the 24/1 date.")
 
 print("end")
 
