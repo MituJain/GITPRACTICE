@@ -1,0 +1,145 @@
+File & Directory Operations
+ls - List directory contents
+cd - Change directory
+pwd - Print working directory
+mkdir - Create directory
+rm - Remove files/directories
+cp - Copy files
+mv - Move/rename files
+touch - Create empty file
+cat - Display file contents
+less - View file with pagination
+head - Show first lines
+tail - Show last lines
+tail -f - Follow file changes (logs)
+Search & Filter
+grep - Search text patterns
+find - Find files
+locate - Find files (faster)
+which - Find command location
+wc - Count lines/words/chars
+Process Management
+ps - List processes
+ps aux - List all processes
+top - Monitor processes (live)
+htop - Better process monitor
+kill <pid> - Kill process
+killall <name> - Kill by name
+pkill <pattern> - Kill by pattern
+jobs - List background jobs
+fg - Bring job to foreground
+bg - Send job to background
+nohup - Run immune to hangups
+System Info & Debugging
+uname -a - System info
+df -h - Disk space usage
+du -sh - Directory size
+free -h - Memory usage
+uptime - System uptime & load
+dmesg - Kernel ring buffer
+lsof - List open files
+fuser - Show file users
+Network Debugging
+ping - Test connectivity
+curl - Transfer data from URLs
+wget - Download files
+netstat - Network statistics
+ss - Socket statistics (newer)
+ifconfig - Network interfaces (old)
+ip addr - Network interfaces (new)
+nslookup - DNS lookup
+dig - DNS lookup (detailed)
+traceroute - Trace packet route
+tcpdump - Capture network packets
+nc (netcat) - Network utility
+Log Analysis
+journalctl - View systemd logs
+journalctl -f - Follow logs
+journalctl -u <service> - Service logs
+dmesg | tail - Recent kernel messages
+Performance & Debugging
+strace - Trace system calls
+ltrace - Trace library calls
+time - Time command execution
+vmstat - Virtual memory stats
+iostat - I/O statistics
+sar - System activity report
+perf - Performance analysis
+Text Processing
+awk - Pattern scanning
+sed - Stream editor
+cut - Extract columns
+sort - Sort lines
+uniq - Remove duplicates
+tr - Translate characters
+diff - Compare files
+Permissions & Users
+chmod - Change permissions
+chown - Change owner
+sudo - Run as superuser
+su - Switch user
+whoami - Current user
+id - User/group IDs
+Archives
+tar -xzf - Extract tar.gz
+tar -czf - Create tar.gz
+zip/unzip - Zip operations
+gzip/gunzip - Compress/decompress
+Pipes & Redirection
+| - Pipe output to next command
+> - Redirect output (overwrite)
+>> - Redirect output (append)
+< - Redirect input
+2>&1 - Redirect stderr to stdout
+Useful Combos for Debugging
+ps aux | grep <name> - Find process
+netstat -tulpn | grep <port> - Check port
+tail -f /var/log/*.log - Monitor logs
+lsof -i :<port> - What's using port
+find . -name "*.log" | xargs grep "error" - Search logs
+what are important files or location to look in linux for any networking issue, like resolve or any ,
+
+lis them and inform in short
+
+Here are the important Linux files/locations for networking troubleshooting:
+DNS & Name Resolution
+/etc/resolv.conf - DNS server configuration
+/etc/hosts - Static hostname to IP mappings
+/etc/nsswitch.conf - Name service switch config (resolution order)
+/etc/hostname - System hostname
+Network Configuration
+/etc/network/interfaces - Network interfaces (Debian/Ubuntu)
+/etc/sysconfig/network-scripts/ - Network configs (RHEL/CentOS)
+/etc/netplan/*.yaml - Network config (Ubuntu 18+)
+/etc/NetworkManager/ - NetworkManager configs
+/etc/systemd/network/ - systemd-networkd configs
+Important System Files
+/proc/net/ - Real-time network stats
+/proc/net/tcp - TCP connections
+/proc/net/udp - UDP connections
+/proc/net/route - Routing table
+/sys/class/net/ - Network interface info
+Firewall & Security
+/etc/iptables/ - iptables rules
+/etc/firewalld/ - firewalld config
+/etc/ufw/ - UFW firewall config
+/etc/hosts.allow - TCP wrapper allowed hosts
+/etc/hosts.deny - TCP wrapper denied hosts
+Logs (Critical for Debugging)
+/var/log/syslog - System log (Debian/Ubuntu)
+/var/log/messages - System log (RHEL/CentOS)
+/var/log/kern.log - Kernel log
+/var/log/dmesg - Boot messages
+journalctl -u NetworkManager - NetworkManager logs
+journalctl -u systemd-networkd - systemd-networkd logs
+Service Configuration
+/etc/ssh/sshd_config - SSH server config
+/etc/ssh/ssh_config - SSH client config
+/etc/services - Port to service name mappings
+/etc/protocols - Protocol definitions
+Useful Commands to Check These
+cat /etc/resolv.conf - Check DNS servers
+cat /etc/hosts - Check static mappings
+ip route - Check routing table
+systemctl status NetworkManager - Network service status
+tail -f /var/log/syslog | grep -i network - Monitor network logs
