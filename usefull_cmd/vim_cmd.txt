@@ -1,0 +1,46 @@
+Mode Switching
+i - Insert before cursor
+a - Insert after cursor
+o - Open new line below
+ESC - Return to normal mode
+Navigation
+h j k l - Left, down, up, right
+w - Next word
+b - Previous word
+0 - Start of line
+$ - End of line
+gg - First line
+G - Last line
+#G - Go to line #
+Editing
+x - Delete character
+dd - Delete line
+dw - Delete word
+D - Delete to end of line
+u - Undo
+Ctrl+r - Redo
+yy - Copy line
+p - Paste after cursor
+P - Paste before cursor
+Save & Quit
+:w - Save
+:q - Quit
+:wq or ZZ - Save and quit
+:q! - Quit without saving
+Search & Replace
+/text - Search forward
+?text - Search backward
+n - Next match
+N - Previous match
+:%s/old/new/g - Replace all
+Visual Mode
+v - Visual character mode
+V - Visual line mode
+y - Yank (copy) selection
+d - Delete selection
+Other Useful
+. - Repeat last command
+r - Replace character
+~ - Toggle case
+>> - Indent line
+<< - Unindent line

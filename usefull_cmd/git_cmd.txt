@@ -1,0 +1,56 @@
+Basic Setup
+git init - Initialize new repo
+git clone <url> - Clone remote repo
+git config - Set configuration
+Status & Info
+git status - Show working tree status
+git log - Show commit history
+git log --oneline - Compact commit history
+git diff - Show unstaged changes
+git diff --staged - Show staged changes
+Making Changes
+git add <file> - Stage file
+git add . - Stage all changes
+git commit -m "msg" - Commit with message
+git commit -am "msg" - Stage all & commit
+git rm <file> - Remove file
+git mv <old> <new> - Move/rename file
+Branching
+git branch - List branches
+git branch <name> - Create branch
+git checkout <branch> - Switch branch
+git checkout -b <name> - Create & switch branch
+git switch <branch> - Switch branch (newer)
+git merge <branch> - Merge branch
+git branch -d <name> - Delete branch
+Remote Operations
+git remote -v - List remotes
+git remote add <name> <url> - Add remote
+git fetch - Download remote changes
+git pull - Fetch & merge
+git push - Upload commits
+git push -u origin <branch> - Push & set upstream
+Undoing Changes
+git restore <file> - Discard unstaged changes
+git restore --staged <file> - Unstage file
+git reset HEAD~1 - Undo last commit (keep changes)
+git reset --hard HEAD~1 - Undo last commit (discard changes)
+git revert <commit> - Create new commit that undoes
+git clean -fd - Remove untracked files
+Stashing
+git stash - Stash changes
+git stash pop - Apply & remove stash
+git stash list - List stashes
+git stash apply - Apply stash (keep it)
+Viewing History
+git show <commit> - Show commit details
+git blame <file> - Show who changed each line
+git reflog - Show reference log
+Tagging
+git tag <name> - Create tag
+git tag -a <name> -m "msg" - Create annotated tag
+git push --tags - Push tags to remote
+Advanced
+git rebase <branch> - Reapply commits on top
+git cherry-pick <commit> - Apply specific commit
+git bisect - Binary search for bug
